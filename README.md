@@ -1,13 +1,18 @@
 # dotfilericednlx
 
 
-## programas
+## programas para funcionar 100% sem erro
+dependencias:
 - hyprland
 - waybar
 - wofi
 - kitty
 - fastfetch
 - swaybg
+- pamixer
+- cava
+- nemo ou dolphin
+- 
 
 ![Screenshot](dotfile/swappy-20260716_124319.pngswappy-20260716_124319.png)
 ![Screenshot](dotfile/swappy-20260716_124342.png)
