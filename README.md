@@ -23,6 +23,10 @@ dependencias:
 - atalho para diminuir e aumenta o volume no hyprland.conf
 - transparencia na maiorias do programas no hyprland.conf
 - animaçoes na workspace e janelas
+# distros
+funciona perfeitamente em arch linux
+mas em outras distribuiçoes precisam de ajuste antes
+
 
 
 ## Instalação
