@@ -1,0 +1,19 @@
+k#!/bin/bash
+
+CONFIG="$HOME/.config/cava/config"
+
+cor=$(printf "branco-preto\nazul-preto" | wofi --dmenu -p "Cava")
+
+case "$cor" in
+    branco-preto)
+        sed -i "s/gradient_color_1 = .*/gradient_color_1 = '#000000'/" "$CONFIG"
+        sed -i "s/gradient_color_2 = .*/gradient_color_2 = '#ffffff'/" "$CONFIG"
+        ;;
+    azul-preto)
+        sed -i "s/gradient_color_1 = .*/gradient_color_1 = '#000000'/" "$CONFIG"
+        sed -i "s/gradient_color_2 = .*/gradient_color_2 = '#008CFF'/" "$CONFIG"
+        ;;
+esac
+
+pkill -USR2 cava
+cava &
