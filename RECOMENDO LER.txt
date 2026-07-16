@@ -1,0 +1,2 @@
+## avisos
+recomendo fazer um backup das configs so para garantir que nao vai ocorrer nenhum erro na hora da instalaçao,obrigado.
