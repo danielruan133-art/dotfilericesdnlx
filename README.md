@@ -21,7 +21,7 @@ configuraçoes
 Clone o repositório:
 
 ```bash
-git clone https://github.com/dnlx/dotfilesricednlx.git
+git clone https://github.com/danielruan133-art/dotfilericesdnlx.git
 cd dotfilesricednlx
 chmod +x install.sh
 ./install.sh
