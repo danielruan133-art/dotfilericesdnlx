@@ -1,8 +1,7 @@
 # dotfilericednlx
 
 
-## programas para funcionar 100% sem erro
-dependencias:
+## programas ja configurados e dependencias recomendadas para instalar
 - hyprland
 - waybar
 - wofi
@@ -20,8 +19,8 @@ dependencias:
 ![Screenshot](dotfile/swappy-20260716_124757.png)
 
 # coisas adicionais
-- atalho para diminuir e aumenta o volume no hyprland.conf
-- transparencia na maiorias do programas no hyprland.conf
+- atalho para diminuir e aumenta o volume
+- transparencia na maiorias do programas
 - animaçoes na workspace e janelas
 # distros
 funciona perfeitamente em arch linux
