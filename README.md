@@ -1,6 +1,5 @@
 # dotfilerice
 
-configuraçoes
 
 ## programas
 - hyprland
