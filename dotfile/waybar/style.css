@@ -1,0 +1,68 @@
+/* @import url(""); */
+
+/* Configurações Gerais */
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 7px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+/* Janela Principal da Barra */
+window#waybar {
+    background: transparent;
+}
+
+/* Remove o fundo individual dos módulos para eles não virarem caixinhas soltas */
+#custom-launcher,
+#clock,
+#workspaces,
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#network,
+#battery,
+#tray {
+    background: transparent;
+    color: @foreground;
+    padding: 0 6px;
+    margin: 0;
+    border: none;
+}
+
+/* ESTILIZAÇÃO DO PRINT: Cria as duas pílulas unificadas nas pontas */
+.modules-left,
+.modules-right {
+    background-color: #000000; /* Fundo preto sólido igual ao do print */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    border-radius: 12px; /* Bordas arredondadas das barras das pontas */
+    padding: 4px 12px;
+    margin: 6px 10px; /* Descola a barra do topo e das laterais da tela */
+}
+
+/* Ajustes finos para os Workspaces dentro da pílula esquerda */
+#workspaces button {
+    color: rgba(255, 255, 255, 0.4); /* Números inativos ficam mais apagados */
+    background: transparent;
+    border-radius: 6px;
+    padding: 0 6px;
+    margin: 0 2px;
+}
+
+#workspaces button.active {
+    color: #ffffff; /* Número ativo fica totalmente branco/aceso */
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Ajuste do ícone do Launcher se quiser usar à esquerda dos workspaces */
+#custom-launcher {
+    color: @color4;
+    padding-right: 8px;
+}

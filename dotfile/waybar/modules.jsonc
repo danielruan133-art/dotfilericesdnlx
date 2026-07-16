@@ -1,0 +1,239 @@
+//  __  __           _       _
+// |  \/  | ___   __| |_   _| | ___  ___
+// | |\/| |/ _ \ / _` | | | | |/ _ \/ __|
+// | |  | | (_) | (_| | |_| | |  __/\__ \
+// |_|  |_|\___/ \__,_|\__,_|_|\___||___/
+//
+// by Frogprog (2025)
+// -----------------------------------------------------
+
+{
+  // Battery module
+  "battery": {
+    "interval": 30,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󰂄",
+    "format-plugged": "{capacity}% 󰂄 ",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰁻",
+      "󰁼",
+      "󰁾",
+      "󰂀",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+
+  // Language module
+  "hyprland/language": {
+    "format-en": "En",
+    "format-ru": "Ru"
+  },
+
+  // Hyprland workspaces
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "empty": ""
+    },
+    "persistent-workspaces": {
+      "eDP-1": [1, 2, 3, 4, 5]
+    }
+  },
+
+  // Network module
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "",
+    "tooltip-format-disconnected": "Error",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} 🖧",
+    "on-click": "kitty nmtui"
+  },
+
+  // Clock
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M:%OS}  ",
+    "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+
+  // Brightness
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": [
+      "",
+      ""
+    ]
+  },
+
+  // Bluetooth
+  "bluetooth": {
+    "format-on": "󰂯",
+    "format-off": "BT-off",
+    "format-disabled": "󰂲",
+    "format-connected-battery": "{device_battery_percentage}% 󰂯",
+    "format-alt": "{device_alias} 󰂯",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+    "on-click-right": "blueman-manager"
+  },
+
+  // Tray
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10
+  },
+
+  // Audio
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "Muted",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+
+  // Separator
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+
+  // Launcher
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+
+  // Color picker
+  "custom/hyprpicker": {
+    "format": " ",
+    "on-click": "hyprpicker",
+    "tooltip": false
+  },
+
+  // Right group
+  "group/system-stuff": {
+    "orientation": "horizontal",
+    "modules": [
+      "network",
+      "custom/separator",
+      "bluetooth",
+      "custom/separator",
+      "hyprland/language",
+      "custom/separator",
+      "pulseaudio",
+      "custom/separator",
+      "battery",
+      "custom/separator",
+      "custom/lock",
+      "custom/separator",
+      "custom/shutdown"
+    ]
+  },
+
+  // Left group
+  "group/info-stuff": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/launcher",
+      "custom/separator",
+      "clock",
+      "custom/separator"
+    ]
+  },
+
+  // Expand icon
+  "custom/expand": {
+    "format": " ",
+    "tooltip": false
+  },
+
+  // Expand group
+  "group/expand": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 600,
+      "transition-to-right": true,
+      "click-to-reveal": true
+    },
+    "modules": [
+      "custom/expand",
+      "custom/separator",
+      "custom/hyprpicker",
+      "custom/separator",
+      "cpu",
+      "custom/separator",
+      "memory",
+      "custom/separator",
+      "temperature"
+    ]
+  },
+
+  // Hardware
+  "cpu": {
+    "format": "󰻠",
+    "tooltip": true
+  },
+
+  "memory": {
+    "format": ""
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": ""
+  },
+
+  // Lock
+  "custom/lock": {
+    "format": "󰌾 ",
+    "on-click": "hyprlock",
+    "tooltip": false
+  },
+
+  // Shutdown
+  "custom/shutdown": {
+    "format": " ",
+    "on-click": "wlogout",
+    "tooltip": false
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "include": [
+    "~/.config/waybar/modules.jsonc"
+  ],
+
+  "layer": "top",
+  "position": "top",
+  "spacing": 0, /* Zera o espaço entre os módulos internos para eles não se separarem */
+
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [],
+
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "clock",
+    "tray"
+  ],
+
+  /* Formato dos Workspaces apenas com números/ícones simples */
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "sort-by-number": true
+  },
+
+  /* Formatos dos módulos com um separador sutil (Ex: " | ") se achar que ficaram colados */
+  "clock": {
+    "format": "    {:%d %b}    {:%H:%M}"
+  },
+
+  "cpu": {
+    "format": "  {usage}% "
+  },
+
+  "memory": {
+    "format": "  {used:0.1f}G "
+  },
+
+  "temperature": {
+    "format": "  {temperatureC}°C "
+  },
+
+  "pulseaudio": {
+    "format": " {icon} {volume}% ",
+    "format-muted": "   Muted ",
+    "format-icons": {
+      "default": ["", "", ""]
+    }
+  },
+
+  "network": {
+    "format-wifi": "   {essid} ",
+    "format-ethernet": "   {ifname} ",
+    "format-disconnected": "     "
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": " {icon} {capacity}% ",
+    "format-charging": "    {capacity}% ",
+    "format-icons": ["  ", "  ", "  ", "  ", "  "]
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 8
+  }
+}
