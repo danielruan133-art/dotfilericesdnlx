@@ -1,4 +1,4 @@
-# dotfilerice
+# dotfilericednlx
 
 
 ## programas
@@ -13,6 +13,11 @@
 ![Screenshot](dotfile/swappy-20260716_124342.png)
 ![Screenshot](dotfile/swappy-20260716_124419.png)
 ![Screenshot](dotfile/swappy-20260716_124757.png)
+
+# coisas adicionais
+- atalho para diminuir e aumenta o volume no hyprland.conf
+- transparencia na maiorias do programas no hyprland.conf
+- animaçoes na workspace e janelas
 
 
 ## Instalação
