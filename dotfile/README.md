@@ -23,3 +23,6 @@ Clone o repositório:
 ```bash
 git clone https://github.com/dnlx/dotfilesricednlx.git
 cd dotfilesricednlx
+chmod +x install.sh
+./install.sh
+
