@@ -1,7 +1,7 @@
 # dotfilericednlx
 
 
-## programas ja configurados e dependencias recomendadas para instalar
+## programas ja configurados
 - hyprland
 - waybar
 - wofi
